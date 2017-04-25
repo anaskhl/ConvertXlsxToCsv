@@ -6,8 +6,10 @@ def convert(s):
         return s.encode("utf-8")
     elif isinstance(s, unicode):
         return s.encode("utf-8")
+    elif (s.is_integer()):
+		return int(s)
     else:
-        return int(s)
+		return s
 
 quote = {'1': csv.QUOTE_ALL,
          '2': csv.QUOTE_MINIMAL,
